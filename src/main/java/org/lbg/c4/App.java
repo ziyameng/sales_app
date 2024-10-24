@@ -36,7 +36,6 @@ public class App {
         System.out.println("please enter the vat (%)");
         double vat = sc.nextDouble();
 
-        vatCalculator(totalAmount, vat);
 
         Collections.sort(list);
         System.out.println("After Sorting: " +list);
@@ -45,15 +44,10 @@ public class App {
         item.setQuantity(list.size());
         item.setVat(vat);
 
+        item.vatCalculatorInClass();
+
 
         System.out.println(item.toString());
-    }
-
-
-    public static void vatCalculator(double cost, double vat){
-        double totalPrice = cost + cost*(vat/100);
-
-        System.out.println("the total price is "+totalPrice);
     }
 
 

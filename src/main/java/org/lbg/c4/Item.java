@@ -48,4 +48,11 @@ public class Item {
                 ", vat=" + vat +
                 '}';
     }
+
+
+    public void vatCalculatorInClass(){
+        double totalPrice = cost + cost*(vat/100);
+
+        System.out.println("the total price is "+totalPrice);
+    }
 }
