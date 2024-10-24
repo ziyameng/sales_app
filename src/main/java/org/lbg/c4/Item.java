@@ -12,6 +12,10 @@ public class Item {
         this.vat = vat;
     }
 
+    public Item() {
+
+    }
+
     public double getCost() {
         return cost;
     }
@@ -34,5 +38,14 @@ public class Item {
 
     public void setVat(double vat) {
         this.vat = vat;
+    }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "cost=" + cost +
+                ", quantity=" + quantity +
+                ", vat=" + vat +
+                '}';
     }
 }

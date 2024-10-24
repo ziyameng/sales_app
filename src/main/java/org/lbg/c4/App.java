@@ -11,6 +11,8 @@ import java.util.Scanner;
 public class App {
 
     public static void main(String[] args) {
+        Item item = new Item();
+
         ArrayList<Double> list = new ArrayList<>();
 
         double totalAmount = 0;
@@ -24,7 +26,6 @@ public class App {
             double cost = sc.nextDouble();
             totalAmount = totalAmount +cost;
             list.add(cost);
-
 
             sc.nextLine();
 
@@ -40,6 +41,12 @@ public class App {
         Collections.sort(list);
         System.out.println("After Sorting: " +list);
 
+        item.setCost(totalAmount);
+        item.setQuantity(list.size());
+        item.setVat(vat);
+
+
+        System.out.println(item.toString());
     }
 
 
